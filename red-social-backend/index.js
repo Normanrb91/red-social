@@ -22,7 +22,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 app.get('/', (req, resp)=> {
-    resp.redirect('https://documenter.getpostman.com/view/11369744/UzBmLRzp#130e2023-fe56-4ce3-84d6-3953f757f745')
+    resp.redirect('https://documenter.getpostman.com/view/11369744/UzBmLRzp')
 })
 
 app.use('/api/auth', routerAuth);
