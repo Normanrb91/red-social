@@ -5,7 +5,7 @@ const dbConnection = async() =>{
 
     try {
         set("strictQuery", false);
-        connect(process.env.DB_CNN, { useNewUrlParser: true });
+        connect(process.env.DB_CNN, { useNewUrlParser: true, useUnifiedTopology: true });
         console.log('Conectado a la BD');
         
     } catch (error) {
