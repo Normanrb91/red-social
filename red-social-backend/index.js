@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path')
 const { dbConnection } = require('./database/dbConnection');
 
 const routerAuth = require('./routes/auth.routes');
@@ -17,12 +18,12 @@ dbConnection();
 
 app.use(cors({origin: '*'}));
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.json());
 
 app.get('/', (req, resp)=> {
-    resp.render('index.html')
+    resp.sendFile(path.join(__dirname, 'index.html'));
 })
 
 app.use('/api/auth', routerAuth);
