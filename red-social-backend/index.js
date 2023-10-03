@@ -17,13 +17,11 @@ dbConnection();
 
 app.use(cors({origin: '*'}));
 
-app.use(express.static('public'));
+app.use('/', express.static('public'));
 
 app.use(express.json());
 
-app.get('/', (req, resp)=> {
-    resp.render('index')
-})
+
 
 app.use('/api/auth', routerAuth);
 app.use('/api/user', routerUSer);
