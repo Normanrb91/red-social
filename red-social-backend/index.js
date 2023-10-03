@@ -21,6 +21,10 @@ app.use(express.static('public'));
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send("Esto es una prueba")
+})
+
 app.use('/api/auth', routerAuth);
 app.use('/api/user', routerUSer);
 app.use('/api/follow', routerFollow);
