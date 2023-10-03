@@ -21,6 +21,10 @@ app.use(express.static('public'));
 
 app.use(express.json());
 
+app.get('/', (req, resp)=> {
+    resp.redirect('https://documenter.getpostman.com/view/11369744/UzBmLRzp#130e2023-fe56-4ce3-84d6-3953f757f745')
+})
+
 app.use('/api/auth', routerAuth);
 app.use('/api/user', routerUSer);
 app.use('/api/follow', routerFollow);
