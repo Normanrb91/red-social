@@ -25,7 +25,7 @@ Las librerías o paquetes más importantes usadas en el desarrollo son:
 - **Contraseña:** 123456
 
 ### Sugerencias
-El backend se encuentra desplegado en Heroku por lo tanto si desea levantar el proyecto de forma local deberá navegar al archivo:
+El backend se encuentra desplegado en Vercel por lo tanto si desea levantar el proyecto de forma local deberá navegar al archivo:
 
 ```src/libs/constants/constans.js ```
 
